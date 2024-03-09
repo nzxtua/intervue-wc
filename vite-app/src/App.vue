@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-	<div>
+	<div class="flex">
 		<a href="https://vitejs.dev" target="_blank">
 			<img src="/vite.svg" class="logo" alt="Vite logo" />
 		</a>
@@ -9,6 +9,8 @@
 			<img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
 		</a>
 	</div>
+
+	<h1>{{ 'InterVue App' }}</h1>
 </template>
 
 <style scoped>

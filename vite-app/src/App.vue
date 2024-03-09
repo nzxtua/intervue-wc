@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-	<div class="flex">
+	<div class="flex justify-center">
 		<a href="https://vitejs.dev" target="_blank">
 			<img src="/vite.svg" class="logo" alt="Vite logo" />
 		</a>
@@ -10,7 +10,7 @@
 		</a>
 	</div>
 
-	<h1>{{ 'InterVue App' }}</h1>
+	<h1>{{ $t('hint') }}</h1>
 </template>
 
 <style scoped>

@@ -1,6 +1,6 @@
 # InterVue App - Web Components (Vite + Vue + TypeScript + i18n)
 
-## TL;DR: Step by Step guide
+### TL;DR - Step by Step guide
 
 Here you will find two directories: `vite-app` and `test-html`
 
@@ -22,7 +22,7 @@ Here you will find two directories: `vite-app` and `test-html`
 4. Run Playwright tests: `npm run test`
    _(to run all the tests using Playwright UI mode)_
 
-## VITE-APP
+## Vite App
 
 _Vite/Vue application for developing Web Components_
 **Commands**
@@ -30,7 +30,7 @@ _Vite/Vue application for developing Web Components_
 - `npm run dev` - runs local Dev server
 - `npm run build` - builds web components and TilewindCSS styles to the `/dist` folder
 
-## TEST-HTML
+## Test HTML
 
 _For testing Web Components integration_
 **Commands**
@@ -44,3 +44,7 @@ _For testing Web Components integration_
 - `<metrics-display />` - shows current counter value
 - `<control-buttons />` - increment / decrement counter value buttons by 1
 - `<control-pane />` - reset counter value button to null
+
+### TODO
+
+- Make i18n work independently for each i18n-host instance

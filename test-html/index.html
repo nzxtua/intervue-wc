@@ -3,7 +3,33 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="../vite-app/dist/vite.svg" />
+		<link rel="stylesheet" type="text/css" href="../vite-app/dist/style.css" />
 		<title>Test HTML</title>
 	</head>
-	<body></body>
+
+	<body>
+		<h2>Group One</h2>
+		<i18n-host>
+			<locale-picker></locale-picker>
+			<metrics-display></metrics-display>
+			<control-pane></control-pane>
+			<control-buttons></control-buttons>
+		</i18n-host>
+
+		<hr />
+
+		<h2>Group Two</h2>
+		<i18n-host>
+			<locale-picker></locale-picker>
+			<metrics-display></metrics-display>
+			<control-pane></control-pane>
+			<control-buttons></control-buttons>
+		</i18n-host>
+
+		<script type="module">
+			import { registerWebComponents } from '../vite-app/dist/web-components.es.js'
+			registerWebComponents()
+		</script>
+	</body>
 </html>

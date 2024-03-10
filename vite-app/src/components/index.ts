@@ -1,0 +1,5 @@
+export { default as ControlButtons } from './ControlButtons.ce.vue'
+export { default as ControlPane } from './ControlPane.ce.vue'
+export { default as I18nHost } from './I18nHost.ce.vue'
+export { default as LocalePicker } from './LocalePicker.ce.vue'
+export { default as MetricsDisplay } from './MetricsDisplay.ce.vue'

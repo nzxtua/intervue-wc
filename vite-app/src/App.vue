@@ -1,4 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ControlButtons from './components/ControlButtons.ce.vue'
+import ControlPane from './components/ControlPane.ce.vue'
+import I18nHost from './components/I18nHost.ce.vue'
+import LocalePicker from './components/LocalePicker.ce.vue'
+import MetricsDisplay from './components/MetricsDisplay.ce.vue'
+</script>
 
 <template>
 	<div class="flex justify-center">
@@ -11,6 +17,22 @@
 	</div>
 
 	<h1>{{ $t('hint') }}</h1>
+
+	<h2>Vue Components:</h2>
+	<I18nHost>
+		<LocalePicker />
+		<MetricsDisplay />
+		<ControlButtons />
+		<ControlPane />
+	</I18nHost>
+
+	<h2>Web Components:</h2>
+	<i18n-host>
+		<locale-picker></locale-picker>
+		<metrics-display></metrics-display>
+		<control-pane></control-pane>
+		<control-buttons></control-buttons>
+	</i18n-host>
 </template>
 
 <style scoped>

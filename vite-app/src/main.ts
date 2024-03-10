@@ -6,4 +6,7 @@ import { i18n } from './i18n/i18nInit'
 import './style.css'
 import './tilewind.css'
 
+import { registerWebComponents } from './web-components'
+registerWebComponents()
+
 createApp(App).use(i18n).mount('#app')

@@ -5,3 +5,51 @@
 h1 {
 	@apply text-3xl font-bold mb-2 font-mono;
 }
+
+h2 {
+	@apply text-2xl font-bold my-3 font-mono;
+}
+
+:host,
+.wrapper {
+	@apply grid gap-8;
+	grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+}
+
+.card {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1;
+	min-width: 420px;
+	min-height: 100px;
+	padding: 20px 30px;
+	box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	border-left: 1px solid rgba(255, 255, 255, 0.5);
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(5px);
+	overflow: hidden;
+}
+
+.card:before {
+	content: '';
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	font-size: 10em;
+	background: rgba(255, 255, 255, 0.05);
+	pointer-events: none;
+}
+
+.card > h2 strong {
+	@apply text-orange-400;
+}
+
+.card > h3 {
+	@apply text-lime-500 font-bold;
+}

@@ -1,0 +1,20 @@
+{
+	"name": "test-html",
+	"version": "0.0.1",
+	"description": "Testing Vue.js web components integration",
+	"main": "index.html",
+	"scripts": {
+		"serve": "vite --port 3000",
+		"test": "npx playwright test --ui"
+	},
+	"keywords": [
+		"vue",
+		"web-components",
+		"playwright"
+	],
+	"author": "Denys Sukhobok",
+	"license": "MIT",
+	"devDependencies": {
+		"vite": "^5.1.5"
+	}
+}

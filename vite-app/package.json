@@ -3,7 +3,8 @@
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
-	"main": "dist/web-components.es.js",
+	"main": "dist/web-components.umd.js",
+	"module": "dist/web-components.es.js",
 	"types": "dist/web-components.d.ts",
 	"files": [
 		"dist"

@@ -1,33 +1,21 @@
-import { DefineComponent, defineCustomElement } from 'vue'
-import * as components from './components'
+import { defineCustomElement } from 'vue'
 
-interface Components {
-	[key: string]: DefineComponent
+import ControlButtons from './components/ControlButtons.ce.vue'
+import ControlPane from './components/ControlPane.ce.vue'
+import I18nHost from './components/I18nHost.ce.vue'
+import LocalePicker from './components/LocalePicker.ce.vue'
+import MetricsDisplay from './components/MetricsDisplay.ce.vue'
+
+const I18nHostElement = defineCustomElement(I18nHost)
+const LocalePickerElement = defineCustomElement(LocalePicker)
+const MetricsDisplayElement = defineCustomElement(MetricsDisplay)
+const ControlPaneElement = defineCustomElement(ControlPane)
+const ControlButtonsElement = defineCustomElement(ControlButtons)
+
+export const registerWebComponents = () => {
+	customElements.define('i18n-host', I18nHostElement)
+	customElements.define('locale-picker', LocalePickerElement)
+	customElements.define('metrics-display', MetricsDisplayElement)
+	customElements.define('control-pane', ControlPaneElement)
+	customElements.define('control-buttons', ControlButtonsElement)
 }
-
-/**
- * Converts a PascalCase string to kebab-case.
- *
- * @param {string} str - The PascalCase string to be converted to kebab-case
- * @return {string} The kebab-case string
- */
-const convertPascalToKebab = (str: string): string =>
-	str.replace(/([a-z0–9])([A-Z])/g, '$1-$2').toLowerCase()
-
-/**
- * Register web components for custom elements.
- */
-const registerWebComponents = () => {
-	for (const componentName in components) {
-		if (Object.prototype.hasOwnProperty.call(components, componentName)) {
-			customElements.define(
-				convertPascalToKebab(componentName),
-				defineCustomElement(
-					(components as unknown as Components)[componentName]
-				)
-			)
-		}
-	}
-}
-
-export { registerWebComponents }

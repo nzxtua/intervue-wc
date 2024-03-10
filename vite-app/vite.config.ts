@@ -9,21 +9,26 @@ export default defineConfig({
 		vue({
 			template: {
 				compilerOptions: {
+					// Treat all tags with a dash as custom elements
 					isCustomElement: tag => tag.includes('-'),
 				},
 			},
 		}),
+		// Vite plugin for compiling typescript d.ts files
 		dts({ include: './src/web-components.ts' }),
 	],
+	// Configuration '@' aliases for imports
 	resolve: {
 		alias: {
 			'@': fileURLToPath(new URL('./src', import.meta.url)),
 		},
 	},
+	// Configuration options for building in Vite library mode
 	build: {
 		lib: {
 			entry: 'src/web-components.ts',
-			formats: ['es'],
+			name: 'intervue-wc',
+			formats: ['es', 'umd'],
 			fileName: format => `web-components.${format}.js`,
 		},
 		minify: false,
@@ -32,7 +37,7 @@ export default defineConfig({
 		emptyOutDir: true,
 		copyPublicDir: true,
 		rollupOptions: {
-			external: ['vue'],
+			external: ['vue', 'vue-i18n', 'tilewindcss'],
 			output: {
 				globals: {
 					vue: 'Vue',

@@ -30,8 +30,8 @@ import MetricsDisplay from './components/MetricsDisplay.ce.vue'
 	<i18n-host>
 		<locale-picker></locale-picker>
 		<metrics-display></metrics-display>
-		<control-pane></control-pane>
 		<control-buttons></control-buttons>
+		<control-pane></control-pane>
 	</i18n-host>
 </template>
 

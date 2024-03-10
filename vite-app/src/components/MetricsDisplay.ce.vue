@@ -13,10 +13,10 @@ const { count } = inject<TUseCounter>('counter')!
 	<div class="card">
 		<h3>{{ t('metricsDisplay.title') }}</h3>
 
-		<h2>
+		<h4>
 			{{ t('metricsDisplay.count') }}:
 			<strong id="counter-value">{{ count }}</strong>
-		</h2>
+		</h4>
 	</div>
 </template>
 

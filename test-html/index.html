@@ -9,7 +9,6 @@
 	</head>
 
 	<body>
-		<h2>Group One</h2>
 		<i18n-host>
 			<locale-picker></locale-picker>
 			<metrics-display></metrics-display>
@@ -19,7 +18,6 @@
 
 		<hr />
 
-		<h2>Group Two</h2>
 		<i18n-host>
 			<locale-picker></locale-picker>
 			<metrics-display></metrics-display>
@@ -31,5 +29,20 @@
 			import { registerWebComponents } from '../vite-app/dist/web-components.es.js'
 			registerWebComponents()
 		</script>
+
+		<style>
+			:root {
+				padding: 2rem;
+				background: rgb(0, 159, 231);
+				background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+
+				background-repeat: no-repeat;
+				background-size: 100% 600%;
+			}
+
+			hr {
+				margin-block: 2rem;
+			}
+		</style>
 	</body>
 </html>

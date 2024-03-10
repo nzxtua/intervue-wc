@@ -15,11 +15,11 @@ const { increment, decrement } = inject<TUseCounter>('counter')!
 
 		<div class="row">
 			<button id="plus-button" type="button" @click="increment">
-				+ {{ t('controlButtons.increment') }}
+				{{ t('controlButtons.increment') }}
 			</button>
-
+			{{ '/' }}
 			<button id="minus" type="button" @click="decrement">
-				- {{ t('controlButtons.decrement') }}
+				{{ t('controlButtons.decrement') }}
 			</button>
 		</div>
 	</div>

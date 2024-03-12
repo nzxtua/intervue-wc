@@ -9,6 +9,7 @@
 	},
 	"keywords": [
 		"vue",
+		"vue-i18n",
 		"web-components",
 		"playwright"
 	],

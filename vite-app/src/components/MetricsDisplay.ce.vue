@@ -21,5 +21,5 @@ const { count } = inject<TUseCounter>('counter')!
 </template>
 
 <style scoped>
-@import url('@/tilewind.css');
+@import url('@/tailwind.css');
 </style>

@@ -14,7 +14,7 @@
 		"preview": "vite preview",
 		"build": "npm run build:wc && npm run build:tw",
 		"build:wc": "vue-tsc && vite build",
-		"build:tw": "tailwindcss -i ./src/tilewind.css -o ./dist/style.css"
+		"build:tw": "tailwindcss -i ./src/tailwind.css -o ./dist/style.css"
 	},
 	"dependencies": {
 		"vue": "^3.4.19",

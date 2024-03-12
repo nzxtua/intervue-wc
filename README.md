@@ -28,7 +28,7 @@ _Vite/Vue application for developing Web Components_
 **Commands**
 
 - `npm run dev` - runs local Dev server
-- `npm run build` - builds web components and TilewindCSS styles to the `/dist` folder
+- `npm run build` - builds web components and TailwindCSS styles to the `/dist` folder
 
 ## Test HTML
 

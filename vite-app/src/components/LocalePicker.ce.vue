@@ -29,5 +29,5 @@ const onChangeLocale = (event: Event) => {
 </template>
 
 <style scoped>
-@import url('@/tilewind.css');
+@import url('@/tailwind.css');
 </style>

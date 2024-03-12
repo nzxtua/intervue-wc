@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { useCounter, useLanguage } from '@/composables'
-import { i18n } from '@/i18n/i18nInit'
+import { i18nInit } from '@/i18n/i18nInit'
 import { provide, watchEffect } from 'vue'
 import { I18nInjectionKey } from 'vue-i18n'
 
 const language = useLanguage()
 const counter = useCounter()
+
+const i18n = i18nInit()
 
 provide(I18nInjectionKey, i18n)
 provide('language', language)

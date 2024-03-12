@@ -19,7 +19,7 @@ const onChangeLocale = (event: Event) => {
 		<h3>{{ t('localePicker.title') }}</h3>
 
 		<form>
-			<select id="locale-picker" :value="locale" @change="onChangeLocale">
+			<select id="locale-picker" .value="locale" @change="onChangeLocale">
 				<option v-for="locale in availableLocales" :value="locale">
 					{{ t(`localePicker.${locale}`) }}
 				</option>

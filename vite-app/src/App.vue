@@ -1,9 +1,12 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import ControlButtons from './components/ControlButtons.ce.vue'
 import ControlPane from './components/ControlPane.ce.vue'
 import I18nHost from './components/I18nHost.ce.vue'
 import LocalePicker from './components/LocalePicker.ce.vue'
 import MetricsDisplay from './components/MetricsDisplay.ce.vue'
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -16,7 +19,7 @@ import MetricsDisplay from './components/MetricsDisplay.ce.vue'
 		</a>
 	</div>
 
-	<h1>{{ $t('hint') }}</h1>
+	<h1>{{ t('hint') }}</h1>
 
 	<h2>Vue Components:</h2>
 	<I18nHost>

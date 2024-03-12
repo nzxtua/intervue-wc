@@ -1,11 +1,13 @@
 import { createI18n } from 'vue-i18n'
 import * as messages from './locale'
 
-export const i18n = createI18n<false>({
-	legacy: false,
-	locale: 'fr',
-	fallbackLocale: 'en',
-	messages,
-})
+export const i18nInit = () =>
+	createI18n<false>({
+		legacy: false,
+		globalInjection: false,
+		locale: 'fr',
+		fallbackLocale: 'en',
+		messages,
+	})
 
-export type Ti18n = typeof i18n
+export type Ti18n = ReturnType<typeof i18nInit>

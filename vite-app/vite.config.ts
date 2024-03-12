@@ -37,10 +37,11 @@ export default defineConfig({
 		emptyOutDir: true,
 		copyPublicDir: true,
 		rollupOptions: {
-			external: ['vue', 'vue-i18n', 'tilewindcss'],
+			external: ['vue', 'vue-i18n', 'tailwindcss'],
 			output: {
 				globals: {
 					vue: 'Vue',
+					'vue-i18n': 'VueI18n',
 				},
 			},
 		},

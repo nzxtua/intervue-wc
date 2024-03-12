@@ -46,5 +46,3 @@ _For testing Web Components integration_
 - `<control-pane />` - reset counter value button to null
 
 ### TODO
-
-- Make i18n work independently for each i18n-host instance

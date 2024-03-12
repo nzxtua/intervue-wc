@@ -83,15 +83,32 @@ test.describe('Locale Picker Component', () => {
 		// Select a locale from the picker
 		await page.selectOption('locale-picker select#locale-picker', 'en')
 
-		// Check if the selected locale is 'English'
-		const selectedLocale = await page
+		// Check if the selected locale of the first group is 'English'
+		const selectedLocaleFirst = await page
+			.locator('locale-picker select#locale-picker')
+			.first()
+			.inputValue()
+		expect(selectedLocaleFirst).toBe('en')
+
+		// Check if the <h3> title changes to "Locale Picker"
+		const h3TitleFirst = await page
+			.locator('locale-picker h3')
+			.first()
+			.textContent()
+		expect(h3TitleFirst).toBe('Locale Picker')
+
+		// Check if the selected locale of the second group is 'French'
+		const selectedLocaleLast = await page
 			.locator('locale-picker select#locale-picker')
 			.last()
 			.inputValue()
-		expect(selectedLocale).toBe('en')
+		expect(selectedLocaleLast).toBe('fr')
 
 		// Check if the <h3> title changes to "Sélecteur de Langue"
-		const h3Title = await page.locator('locale-picker h3').last().textContent()
-		expect(h3Title).toBe('Sélecteur de Langue')
+		const h3TitleLast = await page
+			.locator('locale-picker h3')
+			.last()
+			.textContent()
+		expect(h3TitleLast).toBe('Sélecteur de Langue')
 	})
 })

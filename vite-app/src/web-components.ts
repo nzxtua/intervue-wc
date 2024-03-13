@@ -12,6 +12,7 @@ const MetricsDisplayElement = defineCustomElement(MetricsDisplay)
 const ControlPaneElement = defineCustomElement(ControlPane)
 const ControlButtonsElement = defineCustomElement(ControlButtons)
 
+// Registers the web components.
 export const registerWebComponents = () => {
 	customElements.define('i18n-host', I18nHostElement)
 	customElements.define('locale-picker', LocalePickerElement)

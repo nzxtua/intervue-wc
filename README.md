@@ -4,7 +4,7 @@
 
 Here you will find two directories: `vite-app` and `test-html`
 
-#### Open _**Vite**_ project
+#### Open _**Vite**_ project folder:
 
 1. Go to directory: `cd vite-app`
 2. Install dependencies: `npm install`
@@ -13,9 +13,9 @@ Here you will find two directories: `vite-app` and `test-html`
 4. Build web components: `npm run build`
    _(lib files are now exported to the /dist folder)_
 
-#### Switch to the _**Test**_ directory:
+#### Switch to the _**Test**_ folder:
 
-1. Go to directory: `cd vite-app`
+1. Go to directory: `cd test-html`
 2. Install dependencies: `npm install`
 3. Run local server: `npm run serve`
    _(to check if index.html imports web components correctly)_
@@ -40,9 +40,18 @@ _For testing Web Components integration_
 
 ## Web Components
 
-- `<locale-picker />` - allows locale changing between 'en' and 'fr'
-- `<metrics-display />` - shows current counter value
-- `<control-buttons />` - increment / decrement counter value buttons by 1
-- `<control-pane />` - reset counter value button to null
+- `<i18n-host>` - wrapper component that provides i18n, counter and language contexts to its children
+- - `<locale-picker />` - allows locale changing between 'en' and 'fr'
+- - `<metrics-display />` - displays current counter value
+- - `<control-buttons />` - increment / decrement counter value buttons by 1
+- - `<control-pane />` - reset counter value button back to 0
 
-### TODO
+### Composables
+
+- `useCounter` - holds counter value and all related functionality like `increment`, `decrement` and `reset` functions.
+- `useLanguage` - holds currently selected locale and provides `setLanguage` function.
+
+### Links
+
+- [Vue i18n Web Components](https://vue-i18n.intlify.dev/guide/advanced/wc)
+- [Vue i18n WC Example Repo](https://github.com/intlify/vue-i18n-next/tree/master/examples/web-components)

@@ -1,8 +1,9 @@
 import { ref } from 'vue'
+import type { Locale } from 'vue-i18n'
 
 export const useLanguage = () => {
-	const locale = ref('fr')
-	const setLanguage = (value: string) => (locale.value = value)
+	const locale = ref<Locale>('fr')
+	const setLanguage = (value: Locale) => (locale.value = value)
 
 	return {
 		locale,
